@@ -1,4 +1,4 @@
-import { algonquinGo, konnichiwa, tunementor } from './assets/images';
+import { algonquinGo, AlgonquinAd1, AlgonquinAd2, AlgonquinAd3, konnichiwa, tunementor } from './assets/images';
 
 export const caseStudies = [
   {
@@ -27,9 +27,9 @@ export const caseStudies = [
         eyebrow: '01 / Context',
         title: 'Start with the highest-stakes actions first.',
         text:
-          'The landing experience puts emergency access at the center while keeping support tools close by. The visual language stays minimal so the user can move fast without scanning through decoration.',
-        image: algonquinGo,
-        alt: 'Algonquin GO home screen and emergency access interface',
+          'The landing experience prioritizes instant campus wayfinding while ensuring emergency SOS tools remain pinned and accessible in a single tap without visual clutter.',
+        image: AlgonquinAd1,
+        alt: 'Algonquin GO home screen showing navigation planning and instant SOS access',
         layout: 'right',
       },
       {
@@ -37,17 +37,17 @@ export const caseStudies = [
         title: 'Make reporting feel guided, not clinical.',
         text:
           'The reporting flow breaks a stressful task into calm, sequential steps. Each screen reduces choices, explains what happens next, and keeps the user oriented as they move forward.',
-        image: algonquinGo,
+        image: AlgonquinAd2,
         alt: 'Algonquin GO reporting flow screen',
         layout: 'left',
       },
       {
         eyebrow: '03 / Impact',
-        title: 'End with clarity and a visible next step.',
+        title: 'Keep campus life and safety events connected.',
         text:
-          'The final state confirms the report, surfaces support options, and reinforces trust. It closes the loop instead of leaving the user wondering whether the app received their request.',
-        image: algonquinGo,
-        alt: 'Algonquin GO confirmation and support state',
+          'The events feed gives students immediate visibility into campus workshops, safety walks, and community gatherings. It turns a utility tool into an everyday campus companion.',
+        image: AlgonquinAd3,
+        alt: 'Algonquin GO campus events and safety workshops overview',
         layout: 'right',
       },
     ],

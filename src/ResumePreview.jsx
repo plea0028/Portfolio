@@ -12,7 +12,7 @@ function ResumePreview() {
         </Link>
 
         <nav className="site-nav" aria-label="Primary">
-          <Link to="/">Home</Link>
+          <Link to="/#home">Home</Link>
 
           <div className="site-nav-dropdown">
             <Link to="/#work" className="site-nav-dropdown-trigger">
@@ -28,8 +28,8 @@ function ResumePreview() {
             </div>
           </div>
 
-          <a href="/#about">About</a>
-          <a href="/#contact">Contact</a>
+          <Link to="/#about">About</Link>
+          <Link to="/#contact">Contact</Link>
         </nav>
 
         <Link className="site-header-link" to="/resume" aria-label="Open resume preview page">
@@ -48,9 +48,12 @@ function ResumePreview() {
         <p className="resume-fallback">
           If the preview does not load on your device, use the download link below.
         </p>
+        <a className="resume-download-link" href={resume} download>
+          Download Resume PDF
+        </a>
       </section>
     </main>
-  );
+  )
 }
 
 export default ResumePreview

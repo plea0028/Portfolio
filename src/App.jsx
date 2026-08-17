@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import PropTypes from 'prop-types'
 import DesignPortfolio from './DesignPortfolio'
 import { Route, Routes } from 'react-router-dom'
 import CaseStudyPage from './CaseStudyPage'
@@ -25,8 +27,41 @@ function PageTransition({ children }) {
   )
 }
 
+PageTransition.propTypes = {
+  children: PropTypes.node.isRequired,
+}
+
 function App() {
   const location = useLocation()
+
+  useEffect(() => {
+    let animationFrameId = 0
+
+    if (location.hash) {
+      const targetId = location.hash.slice(1)
+      let attempts = 0
+
+      const scrollToHashTarget = () => {
+        const targetElement = document.getElementById(targetId)
+
+        if (targetElement) {
+          targetElement.scrollIntoView({ block: 'start' })
+          return
+        }
+
+        attempts += 1
+
+        if (attempts < 60) {
+          animationFrameId = window.requestAnimationFrame(scrollToHashTarget)
+        }
+      }
+
+      animationFrameId = window.requestAnimationFrame(scrollToHashTarget)
+      return () => window.cancelAnimationFrame(animationFrameId)
+    }
+
+    window.scrollTo(0, 0)
+  }, [location.pathname, location.hash])
 
   return (
     <>

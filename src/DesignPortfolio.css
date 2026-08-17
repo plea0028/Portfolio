@@ -208,6 +208,11 @@
   padding: clamp(1.5rem, 3.2vw, 2.8rem) 0 clamp(1.7rem, 3.5vw, 3rem);
 }
 
+.hero-section,
+.portfolio-section {
+  scroll-margin-top: clamp(5.5rem, 10vw, 7.5rem);
+}
+
 .hero-kicker,
 .section-heading p,
 .detail-kicker,
@@ -379,11 +384,6 @@
 .project-card:hover .project-card-title,
 .project-card:focus-visible .project-card-title {
   color: var(--project-accent);
-}
-
-.portfolio-about,
-.portfolio-contact {
-  scroll-margin-top: 1.5rem;
 }
 
 .about-panel,
@@ -731,6 +731,46 @@
   box-shadow: var(--shadow);
 }
 
+.detail-page--algonquin .story-beat {
+  background:
+    radial-gradient(circle at 75% 22%, rgba(66, 255, 176, 0.14), transparent 30%),
+    linear-gradient(180deg, #079254 0%, #067545 55%, #055c37 100%);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 1.2rem 2.8rem rgba(6, 94, 56, 0.26),
+    0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.detail-page--algonquin .story-copy {
+  color: #f4fff7;
+}
+
+.detail-page--algonquin .story-copy .detail-section-label,
+.detail-page--algonquin .story-copy .detail-copy,
+.detail-page--algonquin .story-copy .detail-section-title,
+.detail-page--algonquin .story-copy .story-index {
+  color: #f4fff7;
+}
+
+.detail-page--algonquin .story-copy .detail-section-label {
+  color: rgba(244, 255, 247, 0.84);
+}
+
+.detail-page--algonquin .story-copy .story-index {
+  color: rgba(244, 255, 247, 0.36);
+}
+
+.detail-page--algonquin .story-visual-frame {
+  background: linear-gradient(180deg, rgba(3, 94, 54, 0.34), rgba(255, 255, 255, 0.08));
+}
+
+.detail-page--algonquin .story-beat:hover,
+.detail-page--algonquin .story-beat:focus-visible {
+  box-shadow:
+    0 1.35rem 3rem rgba(6, 94, 56, 0.34),
+    0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
 .story-beat--right .story-copy,
 .story-beat--left .story-visual {
   order: 1;
@@ -768,10 +808,9 @@
 }
 
 .story-image {
-  width: 100%;
-  height: 100%;
-  min-height: 24rem;
-  object-fit: cover;
+  height: auto;
+  aspect-ratio: 16 / 16;
+  object-fit: contain;
   display: block;
 }
 
@@ -814,6 +853,7 @@
 .resume-panel {
   display: grid;
   gap: 1rem;
+  justify-items: center;
 }
 
 .resume-frame {
@@ -842,6 +882,30 @@
 
 .resume-fallback {
   font-size: 0.92rem;
+}
+
+.resume-download-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 3rem;
+  padding: 0.55rem 1.35rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fffaf5;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 0.8rem 1.6rem rgba(47, 92, 87, 0.18);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background-color 0.22s ease;
+}
+
+.resume-download-link:hover,
+.resume-download-link:focus-visible {
+  transform: translateY(-2px);
+  background: color-mix(in srgb, var(--accent) 92%, #000);
+  box-shadow: 0 1rem 2rem rgba(47, 92, 87, 0.26);
 }
 
 /* ==========================================================================

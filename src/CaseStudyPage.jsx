@@ -12,7 +12,7 @@ function CaseStudyPage() {
 
   return (
     <main
-      className="site-page detail-page"
+      className={`site-page detail-page${slug === 'algonquin-go' ? ' detail-page--algonquin' : ''}`}
       style={{
         '--project-accent': caseStudy.theme.accent,
         '--project-accent-soft': caseStudy.theme.accentSoft,
@@ -26,7 +26,7 @@ function CaseStudyPage() {
         </Link>
 
         <nav className="site-nav" aria-label="Primary">
-          <Link to="/">Home</Link>
+          <Link to="/#home">Home</Link>
 
           <div className="site-nav-dropdown">
             <Link to="/#work" className="site-nav-dropdown-trigger">
@@ -42,8 +42,8 @@ function CaseStudyPage() {
             </div>
           </div>
 
-          <a href="/#about">About</a>
-          <a href="/#contact">Contact</a>
+          <Link to="/#about">About</Link>
+          <Link to="/#contact">Contact</Link>
         </nav>
 
         <Link className="site-header-link" to="/resume" aria-label="Open resume preview page">
@@ -90,18 +90,15 @@ function CaseStudyPage() {
                 <p className="detail-section-label">{beat.eyebrow}</p>
                 <h2 className="detail-section-title">{beat.title}</h2>
                 <p className="detail-copy">{beat.text}</p>
-                <p className="story-index">0{index + 1}</p>
               </div>
 
               <div className="story-visual">
-                <div className="story-visual-frame">
                   <img
                     src={beat.image}
                     alt={beat.alt}
                     className="story-image"
                     loading={index === 0 ? 'eager' : 'lazy'}
                   />
-                </div>
               </div>
             </article>
           ))}
