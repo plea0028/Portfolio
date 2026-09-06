@@ -60,6 +60,34 @@ function CaseStudyPage() {
           <p className="detail-summary detail-summary--lead">{caseStudy.summary}</p>
           <p className="detail-intro">{caseStudy.intro}</p>
 
+          {(caseStudy.repository || caseStudy.figma) && (
+            <div className="detail-project-links" aria-label={`Project links for ${caseStudy.title}`}>
+              {caseStudy.repository && (
+                <a
+                  href={caseStudy.repository}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="detail-project-link"
+                  aria-label={`View the GitHub repository for ${caseStudy.title}`}
+                >
+                  View repository
+                </a>
+              )}
+
+              {caseStudy.figma && (
+                <a
+                  href={caseStudy.figma}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="detail-project-link detail-project-link--secondary"
+                  aria-label={`View the Figma prototype for ${caseStudy.title}`}
+                >
+                  View Figma
+                </a>
+              )}
+            </div>
+          )}
+
           <dl className="detail-metrics" aria-label="Project details">
             {caseStudy.details.map((detail) => (
               <div key={detail.label} className="detail-metric">

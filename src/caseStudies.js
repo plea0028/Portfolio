@@ -15,6 +15,8 @@ export const caseStudies = [
     },
     summary:
       'Award Winning 🏆 A campus safety companion focused on fast emergency access, clear incident reporting, and peace of mind for students and staff.',
+    repository: 'https://github.com/Student-Algonquin-Mobile-Safety',
+    figma: 'https://www.figma.com/design/DD9noUgYJr70k4diic9xgR/Algonquin-GO-Design-and-prototyping?node-id=1-2&t=FYfNwEjPSYVLEXb4-1',
     intro:
       'Algonquin GO was designed around urgency without panic. The experience had to feel immediate, readable, and dependable for students moving between buildings, parking lots, and late-night study sessions.',
     details: [
@@ -70,6 +72,7 @@ export const caseStudies = [
     },
     summary:
       'A music education tool used by students and teachers to track progress, access resources, and foster musical growth in a fun and engaging way.',
+    figma: 'https://www.figma.com/design/kUiML5U57Jzl3dkhbM7rOC/Tune-Mentor?node-id=822-1725&t=3zFw2gNtPF3JQHwm-1',
     intro:
       'Tunementor needed to work for both practice and teaching. The interface balances progress tracking, lesson discovery, and motivation so the app feels useful in a classroom and at home.',
     details: [
@@ -125,6 +128,7 @@ export const caseStudies = [
     },
     summary:
       'A playful product website built to highlight seasonal drinks, simplify ordering journeys, and strengthen brand personality online.',
+    figma: 'https://www.figma.com/design/3SQteH6DIVoGcCCT7Br01y/Konnichiwa?node-id=0-1&t=kMDwVI8lYzHatZnZ-1',
     intro:
       'Konnichiwa turns a menu into a brand experience. The page needed to feel playful and warm, while still making flavor discovery and ordering straightforward on mobile and desktop.',
     details: [
